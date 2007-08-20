@@ -1,0 +1,8 @@
+--- openmsx-0.6.2/./build/flavour-i686.mk~	2007-04-15 00:25:12.000000000 +0300
++++ openmsx-0.6.2/./build/flavour-i686.mk	2007-08-20 21:38:07.173800449 +0300
+@@ -7,4 +7,4 @@
+ include build/flavour-opt.mk
+ 
+ # Add x86 specific flags.
+-CXXFLAGS+=-march=i686 -mtune=pentium3
++#CXXFLAGS+=-march=i686 -mtune=pentium3
