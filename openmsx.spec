@@ -3,7 +3,7 @@
 Summary:	Open source MSX emulator
 Name:		openmsx
 Version:	0.6.2
-Release:	0.1
+Release:	0.2
 Source0:	http://dl.sourceforge.net/openmsx/%{name}-%{version}.tar.gz
 # Source0-md5:	282acf2ea7bf67e15a7b8d961c9556a5
 Patch0:		%{name}-optflags.patch
@@ -51,4 +51,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README doc/*
 %attr(755,root,root) %{_bindir}/openmsx
-%{_datadir}/openMSX/share/*
+%{_datadir}/openMSX
