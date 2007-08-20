@@ -1,3 +1,5 @@
+# TODO
+# - cc, optflags, %{__make} usage
 Summary:	Open source MSX emulator
 Name:		openmsx
 Version:	0.6.2
