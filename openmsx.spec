@@ -42,30 +42,11 @@ cp -r Contrib/cbios/C-BIOS_MSX1/ $RPM_BUILD_ROOT%{_datadir}/openMSX/share/machin
 cp -r Contrib/cbios/C-BIOS_MSX2/ $RPM_BUILD_ROOT%{_datadir}/openMSX/share/machines
 cp -r Contrib/cbios/C-BIOS_MSX2+/ $RPM_BUILD_ROOT%{_datadir}/openMSX/share/machines
 
-# menu
-install -d $RPM_BUILD_ROOT%{_menudir}
-cat > $RPM_BUILD_ROOT%{_menudir}/%{name} <<EOF
-?package(%{name}): \
-   command="%{_bindir}/openmsx" \
-   icon="emulators_section.png" \
-   title="Openmsx" \
-   longtitle="%{summary}" \
-   needs="x11" \
-   section="More Applications/Emulators"
-EOF
-
-%post
-%update_menus
-
-%postun
-%clean_menus
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog GPL README TODO doc/*
+%doc AUTHORS ChangeLog README doc/*
 %attr(755,root,root) %{_bindir}/openmsx
 %{_datadir}/openMSX/share/*
-%_menudir/%{name}
