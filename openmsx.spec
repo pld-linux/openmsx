@@ -1,15 +1,16 @@
 # TODO
 # - cc, optflags, %{__make} usage
 Summary:	Open source MSX emulator
+Summary(pl.UTF-8):	Emulator MSX o otwartych źródłach
 Name:		openmsx
 Version:	0.6.2
 Release:	0.3
+License:	GPL
+Group:		Applications/Emulators
 Source0:	http://dl.sourceforge.net/openmsx/%{name}-%{version}.tar.gz
 # Source0-md5:	282acf2ea7bf67e15a7b8d961c9556a5
 Patch0:		%{name}-optflags.patch
 Patch1:		%{name}-config.patch
-License:	GPL
-Group:		Applications/Emulators
 URL:		http://openmsx.sourceforge.net/
 BuildRequires:	OpenGL-devel
 BuildRequires:	SDL-devel
@@ -22,6 +23,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 The open source MSX emulator that tries to achieve near-perfect
 emulation by using a novel emulation model.
+
+%description -l pl.UTF-8
+Mający otwarte źródła emulator MSX próbujący osiągnąć prawie doskonałą
+emulację poprzeez użycie nowego modelu emulacji.
 
 %prep
 %setup -q
